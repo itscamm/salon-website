@@ -5,6 +5,8 @@ import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
+import SiteHeader from '@/components/SiteHeader';
+
 import { siteConfig } from '@/constant/config';
 
 // !STARTERCONF Change these default meta
@@ -56,7 +58,10 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body className='bg-neutral-950 text-neutral-100 overflow-x-hidden'>
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   );
 }
