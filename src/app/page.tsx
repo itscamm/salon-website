@@ -26,7 +26,7 @@ export default function HomePage() {
             Meet the team
           </h2>
           <p className='mx-auto mt-3 max-w-2xl text-center text-base text-neutral-400'>
-            Three stylists. Three specialties. One space built for great hair.
+            Three stylists. One vibe. Bold, alternative hair done right.
           </p>
 
           <div className='mt-10 grid grid-cols-1 gap-8 md:grid-cols-3'>
@@ -35,7 +35,7 @@ export default function HomePage() {
               <div className='aspect-[3/4] w-full bg-neutral-100'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src='/images/Ashleigh.jpg'
+                  src='/images/Ashleigh2.jpg'
                   alt='Ashleigh'
                   className='h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]'
                 />
@@ -70,7 +70,7 @@ export default function HomePage() {
               <div className='aspect-[3/4] w-full bg-neutral-100'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src='/images/Maya.jpg'
+                  src='/images/Maya2.jpg'
                   alt='Maya'
                   className='h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]'
                 />
@@ -107,7 +107,7 @@ export default function HomePage() {
               <div className='aspect-[3/4] w-full bg-neutral-100'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src='/images/Sindi.jpg'
+                  src='/images/Sindi2.jpg'
                   alt='Sindi'
                   className='h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]'
                 />
@@ -234,18 +234,18 @@ export default function HomePage() {
             <div className='rounded-3xl border border-neutral-800 p-6'>
               <p className='text-sm font-semibold'>Location</p>
               <p className='mt-2 text-sm text-neutral-400'>
-                123 Main St, Santa Cruz, CA
+                1220 41st Ave # 12, Capitola, CA
               </p>
+              <p className='mt-2 text-sm text-neutral-400'>Suite # 12</p>
 
               <p className='mt-5 text-sm font-semibold'>Hours</p>
               <p className='mt-2 text-sm text-neutral-400'>
-                Tue–Sat: 10am–6pm <br />
-                Sun–Mon: Closed
+                Mon–Sun: 10am–7pm <br />
               </p>
 
               <p className='mt-5 text-sm font-semibold'>Email</p>
               <p className='mt-2 text-sm text-neutral-400'>
-                hello@yoursalon.com
+                ninelivessalon@gmail.com
               </p>
 
               <div className='mt-6 flex flex-col gap-3 sm:flex-row'>
@@ -258,7 +258,7 @@ export default function HomePage() {
                   Book Now
                 </a>
                 <a
-                  href='https://instagram.com/'
+                  href='https://www.instagram.com/ninelivessalon/?hl=en'
                   target='_blank'
                   rel='noreferrer'
                   className='rounded-xl border border-neutral-700 px-5 py-3 text-center text-sm font-semibold hover:bg-neutral-800'
@@ -270,18 +270,23 @@ export default function HomePage() {
 
             <div className='rounded-3xl border border-neutral-800 p-6'>
               <p className='text-sm font-semibold'>Map</p>
-              <p className='mt-2 text-sm text-neutral-400'>
-                Drop a Google Maps embed here later.
-              </p>
-              <div className='mt-4 aspect-[16/10] w-full rounded-2xl bg-neutral-800 ring-1 ring-neutral-900' />
-              <p className='mt-4 text-xs text-neutral-400'>
-                (Optional) Add parking info, accessibility, and policies here.
-              </p>
+
+              <div className='mt-4 overflow-hidden rounded-2xl ring-1 ring-neutral-900'>
+                <iframe
+                  title='41st Ave Salon Studios map'
+                  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d796.920566838028!2d-121.96487533034856!3d36.969644569743934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e15e445760897%3A0x2d1f67d10b3c5c4e!2s41st%20Ave%20Salon%20Studios!5e0!3m2!1sen!2sus!4v1771395118740!5m2!1sen!2sus'
+                  className='h-[320px] w-full md:h-[360px]'
+                  style={{ border: 0 }}
+                  loading='lazy'
+                  referrerPolicy='no-referrer-when-downgrade'
+                  allowFullScreen
+                />
+              </div>
             </div>
           </div>
 
           <footer className='mt-12 border-t border-neutral-800 pt-6 text-xs text-neutral-500'>
-            © {new Date().getFullYear()} Your Salon Name. All rights reserved.
+            © {new Date().getFullYear()} Nine Lives Salon. All rights reserved.
           </footer>
         </div>
       </section>

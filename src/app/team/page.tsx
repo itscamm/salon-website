@@ -6,21 +6,21 @@ const STYLISTS = [
     slug: 'ashleigh',
     specialty: '@riotcathair',
     booking: 'https://ashonthemoonbooking.as.me/schedule/b9551587',
-    image: '/images/Ashleigh.jpg',
+    image: '/images/Ashleigh2.jpg',
   },
   {
     name: 'Maya',
     slug: 'maya',
     specialty: '@lunarcathairr',
     booking: 'https://bookwithmaya.as.me/schedule/86b68931',
-    image: '/images/Maya.jpg',
+    image: '/images/Maya2.jpg',
   },
   {
     name: 'Sindi',
     slug: 'sindi',
     specialty: '@straycathair',
     booking: 'https://bookwithsindi.as.me/schedule/ab649dad',
-    image: '/images/Sindi.jpg',
+    image: '/images/Sindi2.jpg',
   },
 ];
 

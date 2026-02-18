@@ -10,7 +10,7 @@ export default function SindiPage() {
         <div className='aspect-[3/4] overflow-hidden rounded-3xl bg-neutral-800 ring-1 ring-neutral-700'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src='/images/Sindi.jpg'
+            src='/images/Sindi2.jpg'
             alt='Sindi'
             className='h-full w-full object-cover'
           />

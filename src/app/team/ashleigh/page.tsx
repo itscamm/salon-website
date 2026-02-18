@@ -10,7 +10,7 @@ export default function AshleighPage() {
         <div className='aspect-[3/4] overflow-hidden rounded-3xl bg-neutral-800 ring-1 ring-neutral-700'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src='/images/ashleigh.jpg'
+            src='/images/ashleigh2.jpg'
             alt='Ashleigh'
             className='h-full w-full object-cover'
           />
