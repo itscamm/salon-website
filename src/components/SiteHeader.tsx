@@ -45,7 +45,7 @@ export default function SiteHeader() {
           </Link>
 
           <Link
-            href='/book'
+            href='/team'
             className='ml-2 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-200'
           >
             Book Now

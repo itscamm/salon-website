@@ -8,12 +8,12 @@ export default function HomePage() {
     <main className='relative bg-neutral-950 text-neutral-100 pt-14'>
       <header className='bg-neutral-950'>
         <div className='mx-auto max-w-6xl px-4 py-5'>
-          <div className='flex justify-center'>
+          <div className='flex items-center justify-center py-4 sm:py-6'>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src='/images/Salon Logo.png'
-              alt='Salon Cats'
-              className='h-28 w-[95%] max-w-[1200px] rounded-3xl object-contain sm:h-44 md:h-60 lg:h-[420px]'
+              src='/images/Salon Logo2.png'
+              alt='Nine Lives Salon'
+              className='block w-[95%] max-w-[420px] sm:max-w-[400px] md:max-w-[400px] lg:max-w-[480px] h-auto object-contain'
             />
           </div>
         </div>
