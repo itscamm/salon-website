@@ -27,26 +27,45 @@ export default function SiteHeader() {
 
       {/* Header 2: Nav (ALL pages, sticks while scrolling) */}
       <header className='sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/85 backdrop-blur'>
-        <nav className='mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-4 py-3 text-sm text-neutral-200'>
-          <Link className='hover:text-white' href='/'>
+        <nav className='mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 gap-y-2 md:gap-x-6 md:gap-y-2 px-4 py-3 text-sm text-neutral-200'>
+          <Link
+            href='/'
+            className='hover:text-white max-md:rounded-lg max-md:border max-md:border-neutral-800 max-md:bg-neutral-900/40 max-md:px-3 max-md:py-1.5'
+          >
             Home
           </Link>
-          <Link className='hover:text-white' href='/team'>
+
+          <Link
+            href='/team'
+            className='hover:text-white max-md:rounded-lg max-md:border max-md:border-neutral-800 max-md:bg-neutral-900/40 max-md:px-3 max-md:py-1.5'
+          >
             Stylists
           </Link>
-          <Link className='hover:text-white' href='/services'>
+
+          <Link
+            href='/services'
+            className='hover:text-white max-md:rounded-lg max-md:border max-md:border-neutral-800 max-md:bg-neutral-900/40 max-md:px-3 max-md:py-1.5'
+          >
             Services
           </Link>
-          <Link className='hover:text-white' href='/gallery'>
+
+          <Link
+            href='/gallery'
+            className='hover:text-white max-md:rounded-lg max-md:border max-md:border-neutral-800 max-md:bg-neutral-900/40 max-md:px-3 max-md:py-1.5'
+          >
             Gallery
           </Link>
-          <Link className='hover:text-white' href='/#contact'>
+
+          <Link
+            href='/#contact'
+            className='hover:text-white max-md:rounded-lg max-md:border max-md:border-neutral-800 max-md:bg-neutral-900/40 max-md:px-3 max-md:py-1.5'
+          >
             Contact
           </Link>
 
           <Link
             href='/team'
-            className='ml-2 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-200'
+            className='ml-2 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-200 max-md:ml-0'
           >
             Book Now
           </Link>

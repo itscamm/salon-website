@@ -1,3 +1,5 @@
+import { FaInstagram, FaTiktok } from 'react-icons/fa';
+
 export default function AshleighPage() {
   return (
     <main className='mx-auto max-w-6xl px-4 py-14'>
@@ -46,14 +48,38 @@ export default function AshleighPage() {
             </p>
           </div>
 
-          <a
-            className='mt-6 inline-block rounded-xl bg-pink-500 px-5 py-3 text-sm font-semibold text-white hover:opacity-90'
-            href='https://ashonthemoonbooking.as.me/schedule/b9551587'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Book with Ashleigh
-          </a>
+          <div className='mt-6 flex flex-col gap-3 sm:flex-row sm:items-center'>
+            <a
+              className='inline-flex items-center justify-center rounded-xl bg-pink-500 px-5 py-3 text-sm font-semibold text-white hover:opacity-90'
+              href='https://ashonthemoonbooking.as.me/schedule/b9551587'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Book with Ashleigh
+            </a>
+
+            <div className='grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:items-center sm:gap-2'>
+              <a
+                href='https://www.instagram.com/riotcathair/'
+                target='_blank'
+                rel='noreferrer'
+                aria-label='Ashleigh on Instagram'
+                className='inline-flex w-full items-center justify-center rounded-xl border border-neutral-700 bg-neutral-950 px-4 py-3 text-neutral-100 hover:bg-neutral-800 sm:h-11 sm:w-11 sm:p-0'
+              >
+                <FaInstagram className='h-6 w-6' />
+              </a>
+
+              <a
+                href='https://www.tiktok.com/@riotcathair'
+                target='_blank'
+                rel='noreferrer'
+                aria-label='Ashleigh on TikTok'
+                className='inline-flex w-full items-center justify-center rounded-xl border border-neutral-700 bg-neutral-950 px-4 py-3 text-neutral-100 hover:bg-neutral-800 sm:h-11 sm:w-11 sm:p-0'
+              >
+                <FaTiktok className='h-6 w-6' />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </main>

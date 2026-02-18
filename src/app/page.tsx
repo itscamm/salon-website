@@ -3,6 +3,17 @@
 import Link from 'next/link';
 import * as React from 'react';
 
+const GALLERY_IMAGES = [
+  '/images/gallery/AG1.png',
+  '/images/gallery/SG4.jpg',
+  '/images/gallery/MG1.jpg',
+  '/images/gallery/AG4.png',
+  '/images/gallery/SG1.jpg',
+  '/images/gallery/MG4.jpg',
+  '/images/gallery/AG5.png',
+  '/images/gallery/SG2.jpg',
+];
+
 export default function HomePage() {
   return (
     <main className='relative bg-neutral-950 text-neutral-100 pt-14'>
@@ -18,7 +29,6 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-
       {/* TEAM */}
       <section id='team' className='scroll-mt-16 border-t border-neutral-800'>
         <div className='mx-auto max-w-6xl px-4 py-14'>
@@ -46,7 +56,7 @@ export default function HomePage() {
                   href='https://ashonthemoonbooking.as.me/schedule/b9551587'
                   target='_blank'
                   rel='noreferrer'
-                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200'
+                  className='inline-flex w-full items-center justify-center rounded-xl bg-pink-500 px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200'
                 >
                   Book Now
                 </a>
@@ -81,7 +91,7 @@ export default function HomePage() {
                   href='https://bookwithmaya.as.me/schedule/86b68931'
                   target='_blank'
                   rel='noreferrer'
-                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200'
+                  className='inline-flex w-full items-center justify-center rounded-xl bg-blue-500 px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200'
                 >
                   Book Now
                 </a>
@@ -118,7 +128,7 @@ export default function HomePage() {
                   href='https://bookwithsindi.as.me/schedule/ab649dad'
                   target='_blank'
                   rel='noreferrer'
-                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200'
+                  className='inline-flex w-full items-center justify-center rounded-xl bg-violet-500 px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200'
                 >
                   Book Now
                 </a>
@@ -139,66 +149,43 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* HERO */}
+      {/* OUR SPACE */}
       <section className='relative'>
         <div className='mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-14 md:grid-cols-2 md:py-20'>
+          {/* Copy */}
           <div className='flex flex-col justify-center'>
             <p className='text-xs font-semibold tracking-widest text-neutral-400'>
-              COLOR • CUTS • EXTENSIONS • STYLING
-            </p>
-            <h1 className='mt-3 text-4xl font-semibold leading-tight md:text-5xl'>
-              A new salon for bold color, clean cuts, and high-end vibes.
-            </h1>
-            <p className='mt-4 max-w-prose text-base text-neutral-400'>
-              Three stylists. One space. A focus on healthy hair and a look that
-              feels like you.
+              OUR SPACE
             </p>
 
-            <div id='book' className='mt-7 flex flex-col gap-3 sm:flex-row'>
-              <a
-                href='https://your-booking-link-here.com'
-                target='_blank'
-                rel='noreferrer'
-                className='rounded-xl bg-white px-5 py-3 text-center text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-200'
-              >
-                Book an Appointment
-              </a>
-              <a
-                href='#services'
-                className='rounded-xl border border-neutral-700 px-5 py-3 text-center text-sm font-semibold hover:bg-neutral-800'
-              >
-                View Services
-              </a>
-            </div>
+            <h2 className='mt-3 text-4xl font-semibold leading-tight md:text-5xl'>
+              A cozy, inclusive studio built for bold self expression.
+            </h2>
 
-            <div className='mt-8 grid grid-cols-3 gap-4 text-center'>
-              <div className='rounded-2xl border border-neutral-800 p-4'>
-                <div className='text-xl font-semibold'>3</div>
-                <div className='mt-1 text-xs text-neutral-400'>Stylists</div>
-              </div>
-              <div className='rounded-2xl border border-neutral-800 p-4'>
-                <div className='text-xl font-semibold'>5★</div>
-                <div className='mt-1 text-xs text-neutral-400'>Experience</div>
-              </div>
-              <div className='rounded-2xl border border-neutral-800 p-4'>
-                <div className='text-xl font-semibold'>New</div>
-                <div className='mt-1 text-xs text-neutral-400'>Location</div>
-              </div>
+            <div className='mt-4 space-y-4 max-w-prose text-base text-neutral-400'>
+              <p>
+                Nine Lives Salon is an all inclusive, judgment free space where
+                you can show up exactly as you are. Whether you want something
+                loud and chaotic, soft and natural, or anywhere in between, you
+                are welcome here.
+              </p>
+
+              <p>
+                We take hair health seriously and we care about your comfort
+                just as much as the final result. Expect clear communication,
+                good vibes, and a safe chair for everyone.
+              </p>
+
+              <p className='text-sm text-neutral-500'>
+                Come in, get comfortable, and let’s make hair that feels like
+                you.
+              </p>
             </div>
           </div>
 
-          {/* HERO IMAGE PLACEHOLDER */}
+          {/* Big image placeholder */}
           <div className='relative'>
-            <div className='aspect-[4/5] w-full rounded-3xl bg-neutral-900 ring-1 ring-neutral-900' />
-            <div className='absolute bottom-4 left-4 right-4 rounded-2xl bg-neutral-800 p-4 shadow-sm ring-1 ring-neutral-800 backdrop-blur'>
-              <p className='text-sm font-semibold text-neutral-100'>
-                Opening Special
-              </p>
-              <p className='mt-1 text-sm text-neutral-400'>
-                Add your promo here (ex: “$20 off first color service”)
-              </p>
-            </div>
+            <div className='aspect-[4/5] w-full rounded-3xl bg-neutral-800 ring-1 ring-neutral-700' />
           </div>
         </div>
       </section>
@@ -211,15 +198,23 @@ export default function HomePage() {
         <div className='mx-auto max-w-6xl px-4 py-14'>
           <h2 className='text-2xl font-semibold'>Gallery</h2>
           <p className='mt-2 text-sm text-neutral-400'>
-            Replace these blocks with real photos later.
+            A peek at recent work and salon vibes.
           </p>
 
           <div className='mt-8 grid grid-cols-2 gap-4 md:grid-cols-4'>
-            {Array.from({ length: 8 }).map((_, i) => (
+            {GALLERY_IMAGES.map((src, i) => (
               <div
-                key={i}
-                className='aspect-square rounded-2xl bg-neutral-800 ring-1 ring-neutral-900'
-              />
+                key={src + i}
+                className='aspect-square overflow-hidden rounded-2xl bg-neutral-800 ring-1 ring-neutral-900'
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={src}
+                  alt={`Gallery image ${i + 1}`}
+                  className='h-full w-full object-cover'
+                  loading='lazy'
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -250,9 +245,7 @@ export default function HomePage() {
 
               <div className='mt-6 flex flex-col gap-3 sm:flex-row'>
                 <a
-                  href='https://your-booking-link-here.com'
-                  target='_blank'
-                  rel='noreferrer'
+                  href='/team'
                   className='rounded-xl bg-white px-5 py-3 text-center text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-200'
                 >
                   Book Now
@@ -290,7 +283,6 @@ export default function HomePage() {
           </footer>
         </div>
       </section>
-
       {/* eslint-disable @next/next/no-img-element */}
       <img
         src='/images/border-top-left.png'
@@ -298,21 +290,18 @@ export default function HomePage() {
         className='pointer-events-none absolute left-0 top-0 z-60 hidden md:block opacity-100'
         style={{ width: 'clamp(160px, 20vw, 340px)', height: 'auto' }}
       />
-
       <img
         src='/images/border-top-right.png'
         alt=''
         className='pointer-events-none absolute right-0 top-0 z-60 hidden md:block opacity-100'
         style={{ width: 'clamp(160px, 20vw, 340px)', height: 'auto' }}
       />
-
       <img
         src='/images/border-bot-left.png'
         alt=''
         className='pointer-events-none absolute left-0 bottom-0 z-60 hidden md:block opacity-100'
         style={{ width: 'clamp(160px, 20vw, 340px)', height: 'auto' }}
       />
-
       <img
         src='/images/border-bot-right.png'
         alt=''
