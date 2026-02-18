@@ -4,20 +4,23 @@ const STYLISTS = [
   {
     name: 'Ashleigh',
     slug: 'ashleigh',
-    specialty: 'Vivid color • transformations',
+    specialty: '@riotcathair',
     booking: 'https://ashonthemoonbooking.as.me/schedule/b9551587',
+    image: '/images/Ashleigh.jpg',
   },
   {
     name: 'Maya',
     slug: 'maya',
-    specialty: 'Blondes • lived-in color',
+    specialty: '@lunarcathairr',
     booking: 'https://bookwithmaya.as.me/schedule/86b68931',
+    image: '/images/Maya.jpg',
   },
   {
     name: 'Sindi',
     slug: 'sindi',
-    specialty: 'Cuts • styling',
+    specialty: '@straycathair',
     booking: 'https://bookwithsindi.as.me/schedule/ab649dad',
+    image: '/images/Sindi.jpg',
   },
 ];
 
@@ -28,9 +31,7 @@ export default function TeamPage() {
         <h1 className='text-4xl font-semibold tracking-tight md:text-5xl'>
           Stylists
         </h1>
-        <p className='mt-3 max-w-2xl text-neutral-400'>
-          Pick your stylist — or just book the soonest available.
-        </p>
+        <p className='mt-3 max-w-2xl text-neutral-400'></p>
 
         <div className='mt-10 grid grid-cols-1 gap-6 md:grid-cols-3'>
           {STYLISTS.map((s) => (
@@ -38,8 +39,15 @@ export default function TeamPage() {
               key={s.slug}
               className='overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900'
             >
-              {/* Photo placeholder */}
-              <div className='aspect-[3/4] w-full bg-neutral-800' />
+              {/* Photo */}
+              <div className='aspect-[3/4] w-full bg-neutral-800'>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={s.image}
+                  alt={s.name}
+                  className='h-full w-full object-cover'
+                />
+              </div>
 
               <div className='p-4'>
                 <a
@@ -65,13 +73,6 @@ export default function TeamPage() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className='mt-10 rounded-3xl border border-neutral-800 bg-neutral-900 p-6'>
-          <p className='text-sm text-neutral-300'>
-            Coming soon: a “Next Available” booking option if you don’t care who
-            you book with.
-          </p>
         </div>
       </div>
     </main>

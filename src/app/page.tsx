@@ -35,7 +35,7 @@ export default function HomePage() {
               <div className='aspect-[3/4] w-full bg-neutral-100'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src='/team-1.jpg'
+                  src='/images/Ashleigh.jpg'
                   alt='Ashleigh'
                   className='h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]'
                 />
@@ -60,9 +60,7 @@ export default function HomePage() {
 
                 <div className='mt-4'>
                   <h3 className='text-lg font-semibold'>Ashleigh</h3>
-                  <p className='mt-1 text-sm text-neutral-400'>
-                    Vivid color • transformations
-                  </p>
+                  <p className='mt-1 text-sm text-neutral-400'>@riotcathair</p>
                 </div>
               </div>
             </div>
@@ -98,7 +96,7 @@ export default function HomePage() {
                 <div className='mt-4'>
                   <h3 className='text-lg font-semibold'>Maya</h3>
                   <p className='mt-1 text-sm text-neutral-400'>
-                    Blondes • lived-in color
+                    @lunarcathairr
                   </p>
                 </div>
               </div>
@@ -134,9 +132,7 @@ export default function HomePage() {
 
                 <div className='mt-4'>
                   <h3 className='text-lg font-semibold'>Sindi</h3>
-                  <p className='mt-1 text-sm text-neutral-400'>
-                    Cuts • styling
-                  </p>
+                  <p className='mt-1 text-sm text-neutral-400'>@straycathair</p>
                 </div>
               </div>
             </div>
