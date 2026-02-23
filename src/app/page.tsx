@@ -6,10 +6,10 @@ import * as React from 'react';
 import SpaceCarousel from '@/components/SpaceCarousel';
 
 const SPACE_IMAGES = [
-  '/images/space/IMG_7823.jpg',
-  '/images/space/IMG_7851.jpg',
-  '/images/space/IMG_7845.jpg',
-  '/images/space/IMG_7818.jpg',
+  '/images/space/IMG_7823.JPG',
+  '/images/space/IMG_7851.JPG',
+  '/images/space/IMG_7845.JPG',
+  '/images/space/IMG_7818.JPG',
 ];
 
 const GALLERY_IMAGES = [
