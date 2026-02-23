@@ -3,6 +3,15 @@
 import Link from 'next/link';
 import * as React from 'react';
 
+import SpaceCarousel from '@/components/SpaceCarousel';
+
+const SPACE_IMAGES = [
+  '/images/space/IMG_7823.jpg',
+  '/images/space/IMG_7851.jpg',
+  '/images/space/IMG_7845.jpg',
+  '/images/space/IMG_7818.jpg',
+];
+
 const GALLERY_IMAGES = [
   '/images/gallery/AG1.png',
   '/images/gallery/SG4.jpg',
@@ -149,6 +158,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* OUR SPACE */}
       <section className='relative'>
         <div className='mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-14 md:grid-cols-2 md:py-20'>
@@ -180,13 +190,18 @@ export default function HomePage() {
                 Come in, get comfortable, and let’s make hair that feels like
                 you.
               </p>
+
+              <a
+                href='https://www.instagram.com/ninelivessalon/?hl=en'
+                target='_blank'
+                rel='noreferrer'
+                className='mt-6 inline-flex items-center justify-center rounded-xl border border-neutral-700 bg-pink-500 px-5 py-3 text-sm font-semibold text-neutral-100 transition-colors hover:bg-neutral-800'
+              >
+                Follow on Instagram
+              </a>
             </div>
           </div>
-
-          {/* Big image placeholder */}
-          <div className='relative'>
-            <div className='aspect-[4/5] w-full rounded-3xl bg-neutral-800 ring-1 ring-neutral-700' />
-          </div>
+          <SpaceCarousel images={SPACE_IMAGES} alt='Nine Lives Salon space' />
         </div>
       </section>
 
