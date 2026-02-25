@@ -23,37 +23,94 @@ export default function SpaceCarousel({
   const prev = () => go(i - 1);
   const next = () => go(i + 1);
 
-  // Hooks must be ABOVE any early returns
+  // detect "mobile-ish" to avoid jittery smooth scroll
+  const isCoarse = React.useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia?.('(pointer: coarse)').matches ?? false;
+  }, []);
+
+  // scroll to active slide
   React.useEffect(() => {
     if (!n) return;
     const el = trackRef.current;
     if (!el) return;
 
     const w = el.clientWidth;
-    el.scrollTo({ left: i * w, behavior: 'smooth' });
-  }, [i, n]);
+    el.scrollTo({ left: i * w, behavior: isCoarse ? 'auto' : 'smooth' });
+  }, [i, n, isCoarse]);
 
+  // keep alignment on resize
   React.useEffect(() => {
-    if (!n) return;
-    const el = trackRef.current;
-    if (!el) return;
-
     const onResize = () => {
+      const el = trackRef.current;
+      if (!el) return;
       const w = el.clientWidth;
       el.scrollTo({ left: i * w, behavior: 'auto' });
     };
-
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [i, n]);
+  }, [i]);
 
-  // Early return AFTER hooks
+  // swipe (pointer events)
+  const startX = React.useRef(0);
+  const startY = React.useRef(0);
+  const dragging = React.useRef(false);
+  const locked = React.useRef<null | 'x' | 'y'>(null);
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    dragging.current = true;
+    locked.current = null;
+    startX.current = e.clientX;
+    startY.current = e.clientY;
+    (e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (!dragging.current) return;
+
+    const dx = e.clientX - startX.current;
+    const dy = e.clientY - startY.current;
+
+    if (!locked.current) {
+      if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
+        locked.current = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+      }
+    }
+
+    // once we lock to horizontal, prevent page scroll from competing
+    if (locked.current === 'x') {
+      e.preventDefault();
+    }
+  };
+
+  const onPointerUp = (e: React.PointerEvent) => {
+    if (!dragging.current) return;
+    dragging.current = false;
+
+    const dx = e.clientX - startX.current;
+    const dy = e.clientY - startY.current;
+
+    const threshold = 50;
+    if (Math.abs(dx) >= threshold && Math.abs(dx) > Math.abs(dy)) {
+      if (dx > 0) prev();
+      else next();
+    }
+  };
+
   if (!n) return null;
 
   return (
     <div className='w-full'>
       <div className='relative mx-auto w-full max-w-[560px] md:max-w-[620px]'>
-        <div className='overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900'>
+        <div
+          className='overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900 select-none'
+          style={{ touchAction: 'pan-y' }} // allow vertical scroll, we handle horizontal swipe
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
+        >
           <div
             ref={trackRef}
             className='flex w-full overflow-x-hidden'
